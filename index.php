@@ -7,9 +7,9 @@ spl_autoload_register(function($class) {
 	$c = strtolower($class);
 	if(file_exists("classes/{$c}.class.php"))
 		include_once "classes/{$c}.class.php";
-	elseif(file_exists("plugins/{$c}.plugin.php")) {
+	elseif(file_exists("plugins/{$c}.plugin.php"))
 		include_once "plugins/{$c}.plugin.php";
-	} else
+	else
 		throw new Exception("Fatal error: Could not load class '{$class}'.");
 });
 $post = (object) $_POST;
@@ -50,7 +50,7 @@ if(isset($post->query)) {
 		}
 		echo '<br />';
 	}
-	echo '</div';
+	echo '</div>';
 }
 ?>
 </body>
